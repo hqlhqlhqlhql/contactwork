@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icons/heart_filled.png</file>
+        <file>icons/heart_regular.png</file>
+        <file>icons/heart_red_filled.png</file>
+        <file>icons/heart_red_filled.svg</file>
+        <file>icons/heart_red_regular.png</file>
+        <file>icons/heart_red_regular.svg</file>
+    </qresource>
+    <qresource prefix="/card">
+        <file>icons/birhdayCard.png</file>
+        <file>icons/showContact.png</file>
+        <file>icons/showBar.png</file>
+        <file>icons/showEdit.png</file>
+    </qresource>
+</RCC>

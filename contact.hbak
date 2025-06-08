@@ -1,0 +1,211 @@
+#ifndef CONTACT_H
+#define CONTACT_H
+#include <QDate>
+#include <QString>
+#include <QJsonObject>
+class Contact{
+protected:
+    QString name, second_name;
+    QDate birthday;
+    QString email;
+    QString job;
+    bool isFavorite;
+    QString phone;
+    QString qqnumber;
+
+public:
+    virtual ~Contact() {}
+
+    virtual QJsonObject toJson() const = 0;
+    virtual void fromJson(const QJsonObject& obj) = 0;
+    virtual QString getType() = 0;
+
+    void setName(const QString& n) { name = n; }
+    void setPhone(const QString& p) { phone = p; }
+    void setEmail(const QString& e) { email = e; }
+    void setJob(const QString& a) { job = a; }
+    void setQQnumber(const QString& q) { qqnumber = q; }
+    void setDescription(const QString& d) { second_name = d; }
+    void setFavorite(bool f) { isFavorite = f; }
+
+    QString getName() const { return name; }
+    QString getPhone() const { return phone; }
+    QString getEmail() const { return email; }
+    QString getJob() const { return job; }
+    QString getQQnumber() const { return qqnumber; }
+    QString getDescription() const { return second_name; }
+    bool getFavorite() const { return isFavorite; }
+};
+
+class normal_contact: public Contact{
+public:
+    QString getType() const { return "普通联系人"; }
+
+    QJsonObject toJson() const override {
+        QJsonObject obj;
+        obj["name"] = name;
+        obj["phone"] = phone;
+        obj["email"] = email;
+        obj["job"] = job;
+        obj["QQnumber"] = qqnumber;
+        obj["description"] = second_name;
+        obj["isFavorite"] = isFavorite;
+        return obj;
+    }
+
+    void fromJson(const QJsonObject& obj) override {
+        name = obj["name"].toString();
+        phone = obj["phone"].toString();
+        email = obj["email"].toString();
+        job = obj["job"].toString();
+        qqnumber = obj["QQnumber"].toString();
+        second_name = obj["description"].toString();
+        isFavorite = obj["isFavorite"].toBool();
+    }
+};
+
+class teacher_contact: public Contact{
+protected:
+    QString course;
+
+public:
+    void setCourse(const QString& c) { course = c; }
+
+    QString getCourse() const { return course; }
+    QString getType() const { return "教师"; }
+
+    QJsonObject toJson() const override {
+        QJsonObject obj;
+        obj["name"] = name;
+        obj["phone"] = phone;
+        obj["email"] = email;
+        obj["job"] = job;
+        obj["QQnumber"] = qqnumber;
+        obj["description"] = second_name;
+        obj["isFavorite"] = isFavorite;
+        obj["course"] = course;
+        return obj;
+    }
+
+    void fromJson(const QJsonObject& obj) override {
+        name = obj["name"].toString();
+        phone = obj["phone"].toString();
+        email = obj["email"].toString();
+        job = obj["job"].toString();
+        qqnumber = obj["QQnumber"].toString();
+        second_name = obj["description"].toString();
+        isFavorite = obj["isFavorite"].toBool();
+        course = obj["course"].toString();
+    }
+};
+
+class colleague_contact: public Contact{
+protected:
+    QString company;
+
+public:
+    void setCompany(const QString& c) { company = c; }
+
+    QString getcompany() const { return company; }
+    QString getType() const { return "同事"; }
+
+    QJsonObject toJson() const override {
+        QJsonObject obj;
+        obj["name"] = name;
+        obj["phone"] = phone;
+        obj["email"] = email;
+        obj["job"] = job;
+        obj["QQnumber"] = qqnumber;
+        obj["description"] = second_name;
+        obj["isFavorite"] = isFavorite;
+        obj["company"] = company;
+        return obj;
+    }
+
+    void fromJson(const QJsonObject& obj) override {
+        name = obj["name"].toString();
+        phone = obj["phone"].toString();
+        email = obj["email"].toString();
+        job = obj["job"].toString();
+        qqnumber = obj["QQnumber"].toString();
+        second_name = obj["description"].toString();
+        isFavorite = obj["isFavorite"].toBool();
+        company = obj["company"].toString();
+    }
+};
+
+class student_contact: public Contact{
+protected:
+    QString studentID;
+    QString student_class;
+
+public:
+    void setClassName(const QString& c) { student_class = c; }
+    void setStudentID(const QString& s) { studentID = s; }
+
+    QString getstudentId() const { return studentID; }
+    QString getclassName() const { return student_class; }
+    QString getType() const { return "学生"; }
+
+    QJsonObject toJson() const override {
+        QJsonObject obj;
+        obj["name"] = name;
+        obj["phone"] = phone;
+        obj["email"] = email;
+        obj["job"] = job;
+        obj["QQnumber"] = qqnumber;
+        obj["description"] = second_name;
+        obj["isFavorite"] = isFavorite;
+        obj["className"] = student_class;
+        obj["studentID"] = studentID;
+        return obj;
+    }
+
+    void fromJson(const QJsonObject& obj) override {
+        name = obj["name"].toString();
+        phone = obj["phone"].toString();
+        email = obj["email"].toString();
+        job = obj["job"].toString();
+        qqnumber = obj["QQnumber"].toString();
+        second_name = obj["description"].toString();
+        isFavorite = obj["isFavorite"].toBool();
+        studentID = obj["studentID"].toString();
+        student_class = obj["className"].toString();
+    }
+};
+
+class family_contact: public Contact{
+protected:
+    QString relation;
+
+public:
+    void setRelation(const QString& r) { relation = r; }
+
+    QString getType() const { return relation; }
+
+    QJsonObject toJson() const override {
+        QJsonObject obj;
+        obj["name"] = name;
+        obj["phone"] = phone;
+        obj["email"] = email;
+        obj["job"] = job;
+        obj["QQnumber"] = qqnumber;
+        obj["description"] = second_name;
+        obj["isFavorite"] = isFavorite;
+        obj["relation"] = relation;
+        return obj;
+    }
+
+    void fromJson(const QJsonObject& obj) override {
+        name = obj["name"].toString();
+        phone = obj["phone"].toString();
+        email = obj["email"].toString();
+        job = obj["job"].toString();
+        qqnumber = obj["QQnumber"].toString();
+        second_name = obj["description"].toString();
+        isFavorite = obj["isFavorite"].toBool();
+        relation = obj["relation"].toString();
+    }
+};
+
+#endif // CONTACT_H
