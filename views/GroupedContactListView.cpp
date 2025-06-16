@@ -160,7 +160,9 @@ void GroupedContactListView::onSearchEditTextEdit(const QString& searchText)
     contactListModel->setSearchKeyList(manager->search(searchText, _type));
     contactList->clearSelection();
     contactList->scrollTo(contactListModel->index(0));
-
+    connect(ContactSignalHub::instance(), &ContactSignalHub::contactListChanged, this, [=](){
+        contactListModel->setSearchKeyList(manager->search(searchText, _type));
+    });
 }
 
 void GroupedContactListView::updateList()

@@ -1,0 +1,113 @@
+[
+    {
+        "QQnumber": "",
+        "birthday": "2025-06-08",
+        "description": "",
+        "email": "",
+        "isFavorite": true,
+        "job": "",
+        "name": "哈哈哈",
+        "phone": "",
+        "relation": "",
+        "type": "家人"
+    },
+    {
+        "QQnumber": "9625",
+        "birthday": "2025-06-11",
+        "className": "",
+        "description": "优秀学生",
+        "email": "wuwu6@example.com",
+        "isFavorite": true,
+        "job": "学生",
+        "name": "王五",
+        "phone": "9622156",
+        "studentID": "666",
+        "type": "学生"
+    },
+    {
+        "QQnumber": "12345",
+        "birthday": "",
+        "className": "",
+        "description": "优秀学生",
+        "email": "zhangsan@example.com",
+        "isFavorite": true,
+        "job": "",
+        "name": "张三",
+        "phone": "12368489",
+        "studentID": "",
+        "type": "学生"
+    },
+    {
+        "QQnumber": "12345",
+        "birthday": "",
+        "course": "",
+        "description": "qt大神",
+        "email": "zhangsan@example.com",
+        "isFavorite": false,
+        "job": "",
+        "name": "李四",
+        "phone": "138767845",
+        "type": "教师"
+    },
+    {
+        "QQnumber": "33456",
+        "birthday": "",
+        "className": "计算机3班",
+        "description": "算法竞赛冠军",
+        "email": "lilei@example.com",
+        "isFavorite": true,
+        "job": "",
+        "name": "李雷",
+        "phone": "189234567",
+        "studentID": "2023001",
+        "type": "学生"
+    },
+    {
+        "QQnumber": "77889",
+        "birthday": "",
+        "course": "数据结构",
+        "description": "ACM指导教练",
+        "email": "hanmei@example.edu",
+        "isFavorite": false,
+        "job": "副教授",
+        "name": "韩梅",
+        "phone": "135876543",
+        "type": "教师"
+    },
+    {
+        "QQnumber": "",
+        "birthday": "",
+        "description": "",
+        "email": "test2@temp.org",
+        "isFavorite": false,
+        "job": "",
+        "name": "临时联系人",
+        "phone": "",
+        "type": "普通"
+    },
+    {
+        "QQnumber": "44662",
+        "birthday": "",
+        "company": "字节跳动",
+        "description": "前端开发组长",
+        "email": "zhangwei@bytedance.com",
+        "isFavorite": true,
+        "job": "高级工程师",
+        "name": "张伟",
+        "phone": "158112233",
+        "type": "同事"
+    },
+    {
+        "QQnumber": "99581",
+        "birthday": "",
+        "className": "机械1班",
+        "description": "机器人社团",
+        "email": "",
+        "isFavorite": false,
+        "job": "学习委员",
+        "name": "赵雪",
+        "phone": "177889900",
+        "studentID": "2023123",
+        "type": "学生"
+    }
+]

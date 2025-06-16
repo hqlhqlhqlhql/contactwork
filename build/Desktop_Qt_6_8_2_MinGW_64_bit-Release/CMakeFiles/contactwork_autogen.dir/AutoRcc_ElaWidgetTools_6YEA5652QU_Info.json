@@ -1,0 +1,31 @@
+{
+	"BUILD_DIR" : "D:/hql/documents/contactwork/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release/contactwork_autogen",
+	"CMAKE_BINARY_DIR" : "D:/hql/documents/contactwork/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/hql/documents/contactwork/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/hql/documents/contactwork",
+	"CMAKE_SOURCE_DIR" : "D:/hql/documents/contactwork",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "D:/hql/documents/contactwork/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release/contactwork_autogen/include",
+	"INPUTS" : 
+	[
+		"D:/hql/documents/contactwork/include/Image/Cirno.jpg",
+		"D:/hql/documents/contactwork/include/Image/Moon.jpg",
+		"D:/hql/documents/contactwork/include/Image/noise.png",
+		"D:/hql/documents/contactwork/include/Image/user.png",
+		"D:/hql/documents/contactwork/include/Image/MicaBase.png",
+		"D:/hql/documents/contactwork/include/Font/ElaAwesome.ttf",
+		"D:/hql/documents/contactwork/include/Font/segoe_slboot_EX.ttf"
+	],
+	"LOCK_FILE" : "D:/hql/documents/contactwork/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release/CMakeFiles/contactwork_autogen.dir/AutoRcc_ElaWidgetTools_6YEA5652QU_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "ElaWidgetTools" ],
+	"OUTPUT_CHECKSUM" : "6YEA5652QU",
+	"OUTPUT_NAME" : "qrc_ElaWidgetTools.cpp",
+	"RCC_EXECUTABLE" : "D:/Qt/6.8.2/mingw_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "D:/hql/documents/contactwork/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release/CMakeFiles/contactwork_autogen.dir/AutoRcc_ElaWidgetTools_6YEA5652QU_Used.txt",
+	"SOURCE" : "D:/hql/documents/contactwork/include/ElaWidgetTools.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

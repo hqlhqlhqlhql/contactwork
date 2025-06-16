@@ -12,6 +12,7 @@
 #include "ContactManager.h"
 #include "ElaMessageBar.h"
 #include "AboutPage.h"
+#include "ContactSignalHub.h"
 
 
 #include <QSplitter>
@@ -158,7 +159,9 @@ void MainWindow::handleImportContacts() {
         success = manager->saveToFile("contacts.json");
         if (success) {
             qDebug() << "保存成功";
-            contactListPage->updateList();
+            // contactListPage->updateList();
+            emit ContactSignalHub::instance()->contactListChanged();
+
         } else {
             qDebug() << "保存失败";
             // TODO: 弹出错误提示框

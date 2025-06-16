@@ -149,6 +149,9 @@ void ContactListView::onSearchEditTextEdit(const QString& searchText)
     contactListModel->setSearchKeyList(manager->search(searchText));
     contactList->clearSelection();
     contactList->scrollTo(contactListModel->index(0));
+    connect(ContactSignalHub::instance(), &ContactSignalHub::contactListChanged, this, [=](){
+        contactListModel->setSearchKeyList(manager->search(searchText));
+    });
 
 }
 
